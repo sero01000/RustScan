@@ -67,18 +67,18 @@ jobs:
             bin: ${{ github.event.repository.name }}
             name: ${{ github.event.repository.name }}-armv7-unknown-linux-musleabi.tar.gz
             
-          - os_name: Linux-i686-musl
-            os: ubuntu-20.04
-            target: i686-unknown-linux-musl
-            bin: ${{ github.event.repository.name }}
-            name: ${{ github.event.repository.name }}-i686-unknown-linux-musl.tar.gz
-            skip_tests: true
+          # - os_name: Linux-i686-musl
+          #   os: ubuntu-20.04
+          #   target: i686-unknown-linux-musl
+          #   bin: ${{ github.event.repository.name }}
+          #   name: ${{ github.event.repository.name }}-i686-unknown-linux-musl.tar.gz
+          #   skip_tests: true
           
-          - os_name: Linux-riscv64
-            os: ubuntu-20.04
-            target: riscv64gc-unknown-linux-gnu
-            bin: ${{ github.event.repository.name }}
-            name: ${{ github.event.repository.name }}-riscv64gc-unknown-linux-gnu.tar.gz
+          # - os_name: Linux-riscv64
+          #   os: ubuntu-20.04
+          #   target: riscv64gc-unknown-linux-gnu
+          #   bin: ${{ github.event.repository.name }}
+          #   name: ${{ github.event.repository.name }}-riscv64gc-unknown-linux-gnu.tar.gz
 
           - os_name: FreeBSD-x86_64
             os: ubuntu-20.04
@@ -100,12 +100,12 @@ jobs:
             bin: ${{ github.event.repository.name }}.exe
             name: ${{ github.event.repository.name }}-x86_64-pc-windows-msvc.zip
 
-          - os_name: Windows-aarch64
-            os: windows-latest
-            target: aarch64-pc-windows-msvc
-            bin: ${{ github.event.repository.name }}.exe
-            name: ${{ github.event.repository.name }}-aarch64-pc-windows-msvc.zip
-            skip_tests: true
+          # - os_name: Windows-aarch64
+          #   os: windows-latest
+          #   target: aarch64-pc-windows-msvc
+          #   bin: ${{ github.event.repository.name }}.exe
+          #   name: ${{ github.event.repository.name }}-aarch64-pc-windows-msvc.zip
+          #   skip_tests: true
             
           - os_name: Windows-i686
             os: windows-latest
