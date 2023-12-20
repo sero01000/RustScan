@@ -5,6 +5,7 @@ on:
     types: [created]
 
 env:
+  BIN_NAME: rustscan
   GITHUB_TOKEN: ${{ github.token }}
   RUST_BACKTRACE: 1
 
@@ -219,9 +220,9 @@ jobs:
           echo running archive
           cd target/${{ matrix.platform.target }}/release
           if [[ "${{ matrix.platform.os }}" == "windows-latest" ]]; then
-            7z a ../../../${{ matrix.platform.name }} ${{ github.event.repository.name }}.exe
+            7z a ../../../${{ matrix.platform.name }} ${BIN_NAME}.exe
           else
-            tar czvf ../../../${{ matrix.platform.name }} ${{ github.event.repository.name }}
+            tar czvf ../../../${{ matrix.platform.name }} ${BIN_NAME}
           fi
           cd -
         if: |
